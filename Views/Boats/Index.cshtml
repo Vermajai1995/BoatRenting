@@ -1,0 +1,70 @@
+﻿@model IEnumerable<BoatProject.Models.Boat>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create a new boat</a>
+</p>
+
+<p>
+    <a asp-action="AssignBoatToCustomer">Register boat to a customer</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Boat Number
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BoatName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HourlyRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isCurrentlyRented)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RentedByCustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BoatName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HourlyRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isCurrentlyRented)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RentedByCustomerName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
