@@ -1,6 +1,6 @@
 # A boat rental project
 
-to setit up u need to run following command on "Package Manger Console" inorder to setup Database.
+To set up this project- Run the following commands on "Package Manger Console" in order to setup Database.
 
 1. Add-Migration BoatProject.Data.BoatProjectContext
 2. update-database
