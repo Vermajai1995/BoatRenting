@@ -2,8 +2,9 @@
 
 To set up this project- Run the following commands on "Package Manger Console" in order to setup Database.
 
-1. Add-Migration BoatProject.Data.BoatProjectContext
-2. update-database
+# 1. Add-Migration BoatProject.Data.BoatProjectContext
+# 2. update-database
+
 If u face any issue after running above command please updatethe server/host name in "appsetting.json" file.
 
 
